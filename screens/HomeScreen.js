@@ -15,8 +15,6 @@ export default function HomeScreen(props) {
     const [errorMsg, setErrorMsg] = useState()
     const [accessTime, setAccessTime] = useState()
 
-
-
     const getLocation = async () => {
         // try {
         !loading && setLoading(true)
@@ -88,6 +86,7 @@ export default function HomeScreen(props) {
 
     useEffect(() => {
         getLocation();
+        
     }, [])
 
     useEffect(() => {
@@ -117,7 +116,6 @@ export default function HomeScreen(props) {
             <Text>Click on the Address above to Refresh</Text>
         </View>
     )
-
 
     return (
         <View style={styles.container}>
